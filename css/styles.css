@@ -8,6 +8,7 @@
   --third-background-color: #f5f4fa;
   --btn-background-color: #188ce8;
   --logo-header-color: #000000;
+  --icon-color: #afb1b8;
 }
 
 p,
@@ -87,7 +88,7 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  /*outline: 2px solid red;*/
+  /* outline: 2px solid red;*/
 }
 section {
   padding-top: 94px;
@@ -150,6 +151,12 @@ section {
   padding-top: 32px;
   padding-bottom: 32px;
 }
+.header-icon {
+  fill: currentColor;
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+}
 
 .header-contacts {
   display: flex;
@@ -167,7 +174,20 @@ section {
 
 /*--- Кнопка - HERO ---*/
 .hero {
+  display: block;
+  max-width: 1600px;
+  margin: 0 auto;
   background: var(--second-background-color);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/background.jpg);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
   min-height: 600px;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -215,6 +235,16 @@ section {
 .speciality-list {
   display: flex;
   gap: 30px;
+}
+.speciality-icon-border {
+  width: 270px;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .speciality-subtitle {
@@ -280,12 +310,71 @@ section {
   letter-spacing: 0.03em;
   color: var(--main-text-color);
   margin-top: 10px;
+  margin-bottom: 16px;
 }
-/*-- FOOTER-- Адрес і контакти*/
+.team-soc {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.team-soc-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team-soc-icon {
+  fill: var(--icon-color);
+}
+
+.team-soc-link:hover,
+.team-soc-link:focus {
+  background-color: var(--accent-color);
+}
+.team-soc-link:hover .team-soc-icon,
+.team-soc-link:focus .team-soc-icon {
+  fill: var(--second-title-color);
+}
+
+/*----Постійні клієнти____*/
+.clients-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.clients-link {
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clients-icon {
+  fill: var(--icon-color);
+}
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid var(--accent-color);
+}
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--accent-color);
+}
+/*-- --FOOTER-- Адрес і контакти-----*/
 .footer {
   background: var(--second-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.footer-container {
+  display: flex;
+  gap: 70px;
 }
 
 .footer-link {
@@ -309,6 +398,45 @@ section {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-socials {
+}
+.footer-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--second-title-color);
+  margin-bottom: 20px;
+  margin-top: 12px;
+  display: block;
+}
+.footer-soc {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 100px;
+}
+.footer-soc-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+}
+.footer-soc-icon {
+  fill: var(--second-title-color);
+}
+
+.footer-soc-link:hover,
+.footer-soc-link:focus {
+  background-color: var(--accent-color);
 }
 
 /*------- PORTFOLIO------*/
@@ -339,10 +467,14 @@ section {
 .portfolio-btn:focus {
   color: var(--second-title-color);
   background: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .current-btn {
   color: var(--second-title-color);
   background: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-list {
@@ -353,6 +485,11 @@ section {
 .portfolio-list-item {
   background: #ffffff;
   flex-basis: 370px;
+}
+.portfolio-list-item:hover,
+.portfolio-list-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-description {
   padding: 20px 24px;
