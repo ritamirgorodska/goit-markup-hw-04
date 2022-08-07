@@ -160,6 +160,7 @@ section {
 .header-contacts {
   display: flex;
   font-weight: 500;
+  align-items: center;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -347,6 +348,7 @@ section {
 .clients-link {
   width: 170px;
   height: 92px;
+  outline: transparent;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   display: flex;
@@ -400,6 +402,7 @@ section {
 }
 
 .footer-socials {
+  margin-top: 12px;
 }
 .footer-title {
   font-weight: 700;
@@ -410,14 +413,13 @@ section {
 
   color: var(--second-title-color);
   margin-bottom: 20px;
-  margin-top: 12px;
+
   display: block;
 }
 .footer-soc {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 100px;
 }
 .footer-soc-link {
   width: 44px;
